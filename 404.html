@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Birikim</title>
+  <link rel="stylesheet" href="/legal/legal.css" />
+</head>
+<body>
+  <!-- A legal document with no page of its own yet (/legal/<slug>) is drawn here from EFA ID; any other path is not here. -->
+  <main id="legal"><p>Sayfa bulunamadı. <a href="/">Birikim</a></p></main>
+  <script>
+    if (/^\/legal\/[a-z0-9_]+\/?$/.test(location.pathname)) {
+      ['https://unpkg.com/marked@12.0.2/marked.min.js', 'https://unpkg.com/dompurify@3.1.6/dist/purify.min.js',
+        '/legal/legal-config.js', '/legal/legal.js'].reduce(function (previous, src) {
+        return previous.then(function () {
+          return new Promise(function (done) {
+            var script = document.createElement('script');
+            script.src = src;
+            script.onload = done;
+            document.body.appendChild(script);
+          });
+        });
+      }, Promise.resolve());
+    }
+  </script>
+</body>
+</html>

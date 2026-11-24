@@ -1,20 +1,19 @@
 # birikim_site
 
-Birikim's website at `birikim.app`, served by GitHub Pages: the landing page, the privacy policy, the KVKK notice, the
-account deletion page the stores ask for, the legal texts' sources, and the two files that claim the app's paths for
-universal links.
+Birikim's website at `birikim.app`, served by GitHub Pages: the landing page, the legal texts drawn from EFA ID, the
+account deletion page the stores ask for, and the two files that claim the app's paths for universal links.
 
 ## What it holds
 
 | Part | What it does |
 |---|---|
 | `index.html` | The landing page: the App Store and Google Play badges, the app's eight screenshots (`dist/webp/v2.8/`), the modules, contact and KVKK links |
-| `privacy.html` | A privacy policy in English, effective 2021-11-29 |
-| `kvkk.html` | The KVKK notice in Turkish, the same text as `docs/kvkk.md` |
+| `legal/` | The legal texts read in the browser from EFA ID's public route (`legal.js`, `legal-config.js` names the address): `/legal/` lists them, `/legal/<slug>/` shows one with its version, what changed, contents, earlier versions and SHA-256; `404.html` draws a slug with no folder yet |
+| `privacy.html`, `kvkk.html` | Their old addresses, sent on to `/legal/privacy/` and `/legal/kvkk/` |
 | `delete.html` | How to delete a Birikim account, in Turkish |
 | `.well-known/apple-app-site-association` | Claims the app's 13 paths (`/incomes`, `/bills/*` … `/inbox/*`) for iOS; the site's images and icons excluded |
 | `.well-known/assetlinks.json` | Lets the Android app (`app.birikim.mobile`) handle all URLs, with its three signing certificates' fingerprints |
-| `docs/` | The legal texts' sources: privacy policy (Turkish, English), KVKK, Apple's EULA, thanks |
+| `docs/` | The docs; `docs/archive/legal/` keeps the old texts and pages, no longer served as the texts |
 | `src/`, `dist/` | The styles (SCSS) and scripts, the built CSS and JavaScript, images |
 | `changelog/` | One release note |
 

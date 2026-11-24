@@ -10,8 +10,8 @@ the app, so a link to a record opens it in the app.
 
 | Part | What it does | Where | More |
 |---|---|---|---|
-| Pages | Landing, privacy policy, KVKK, account deletion | `index.html`, `privacy.html`, `kvkk.html`, `delete.html` | [`PAGES.md`](PAGES.md) |
-| Legal sources | Privacy policy in Turkish and English, KVKK, Apple's EULA, thanks | `docs/*.md` (privacy and KVKK also as `.docx` and `.pdf`) | [`PAGES.md`](PAGES.md) |
+| Pages | Landing, account deletion; the old privacy and KVKK addresses send on to `/legal/` | `index.html`, `delete.html`, `privacy.html`, `kvkk.html` | [`PAGES.md`](PAGES.md) |
+| Legal texts | Read in the browser from EFA ID's public route, never kept here | `legal/`, `404.html` | [`PAGES.md`](PAGES.md) |
 | iOS association | `applinks` and `webcredentials` for `79S2VKLWU7.app.birikim.mobile`; 13 app paths, the site's images excluded | `.well-known/apple-app-site-association` | [`APP_LINKS.md`](APP_LINKS.md) |
 | Android association | `app.birikim.mobile` handles all URLs, with three SHA-256 fingerprints | `.well-known/assetlinks.json` | [`APP_LINKS.md`](APP_LINKS.md) |
 | Styles and scripts | SCSS and JavaScript sources, the built CSS and JavaScript, images | `src/`, `dist/` | |
@@ -25,7 +25,8 @@ otherwise skip. There is no build step in the repository: `dist/` is committed a
 ## Rules
 
 - A path the app claims is never renamed; the site never uses a claimed path for its own page.
-- The privacy policy changes with the app: a new data use is written in both languages before it ships.
+- A legal text is written and published in the EFA Console (EFA ID › Yasal metinler), never here; the site and the app
+  show the same version and SHA-256.
 - A new signing certificate's fingerprint goes into `assetlinks.json` before a build signed with it ships.
 
 ## Decisions
