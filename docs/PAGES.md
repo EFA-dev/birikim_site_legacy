@@ -53,4 +53,5 @@ email that confirms it carries a link that takes it back (`birikim_mobile/docs/S
 - `delete.html` describes an old deletion: "Account Settings", a passive account and 30 days without a sign-in. The app
   waits 7 days after Settings › Delete account; a sign-in alone does not take it back, the app and the email offer to.
 - A new document's page comes from `404.html`, served with status 404, until its folder is added.
-- Nothing here is published until the owner pushes `main`; `legal-config.js` points at EFA ID's stage until then.
+- Live since 2026-11-24 reading EFA ID's stage, so `birikim.app/legal/` shows stage's sample texts until the owner's
+  real texts are published and `legal-config.js` names EFA ID's prod (YM2, YM13); the owner chose to keep it so.
