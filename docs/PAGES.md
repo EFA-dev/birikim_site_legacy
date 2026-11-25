@@ -21,11 +21,11 @@ Fonts. The legal pages load `marked@12.0.2` and `dompurify@3.1.6` from unpkg.
 The texts, their versions and the record of who saw and accepted what live in EFA ID; they are written and published in
 the EFA Console (EFA ID › Yasal metinler). `legal/legal.js` reads `GET /v1/products/birikim/legal?lang=` (and an earlier
 version's `GET /v1/products/birikim/legal/<slug>/<version>`) from the address in `legal/legal-config.js`, draws the
-Markdown cleaned by DOMPurify, and shows each version's SHA-256, the same the app records. A link document (Apple's
-EULA) shows its address. EFA ID allows `https://birikim.app` to read it (`CORS_ORIGINS` in efaid_api's
+Markdown cleaned by DOMPurify, and shows each version's SHA-256, the same the app records. A link document shows its
+address; Birikim has none since 2026-11-25, when its own licence agreement (`eula`) took the place of Apple's link. EFA ID allows `https://birikim.app` to read it (`CORS_ORIGINS` in efaid_api's
 `config/stage.env` and `config/prod.env`).
 
-`legal-config.js` names EFA ID's stage until EFA ID's prod address exists; it changes with the prod rollout (YM13).
+`legal-config.js` names EFA ID's stage until EFA ID's prod address exists; it changes with the prod rollout (the EFA Atlas's prod plan, PR27).
 
 The app reads the same route through `efa_legal` (birikim_mobile `docs/START.md`); EFA ID's legal emails link to
 `https://birikim.app/legal/<slug>`.
