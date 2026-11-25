@@ -1,6 +1,6 @@
 # Pages and legal texts
 
-The site's pages, and its legal texts, which are EFA ID's (efaid_api `docs/LEGAL_TEXTS_PLAN.md` YM11).
+The site's pages, and its legal texts, which are EFA ID's (efaid_api `docs/LEGAL_TEXTS.md` §3.8).
 
 ## The pages
 
@@ -54,4 +54,4 @@ email that confirms it carries a link that takes it back (`birikim_mobile/docs/S
   waits 7 days after Settings › Delete account; a sign-in alone does not take it back, the app and the email offer to.
 - A new document's page comes from `404.html`, served with status 404, until its folder is added.
 - Live since 2026-11-24 reading EFA ID's stage, so `birikim.app/legal/` shows stage's sample texts until the owner's
-  real texts are published and `legal-config.js` names EFA ID's prod (YM2, YM13); the owner chose to keep it so.
+  real texts are published and `legal-config.js` names EFA ID's prod (the EFA Atlas's PR27); the owner chose to keep it so.

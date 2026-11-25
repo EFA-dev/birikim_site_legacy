@@ -1,4 +1,4 @@
-// Birikim's legal pages (efaid_api docs/LEGAL_TEXTS_PLAN.md YM11): every text is read from EFA ID's public route and
+// Birikim's legal pages (efaid_api docs/LEGAL_TEXTS.md §3.8): every text is read from EFA ID's public route and
 // drawn here, so the site, the app and the record show the same version and the same SHA-256. Nothing is kept in this
 // repository. A page names its document with <body data-slug="privacy">, or the path /legal/<slug>, or ?slug=; no slug
 // lists every document. ?lang=en or tr picks the language, else the page's own, else Turkish.
